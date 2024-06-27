@@ -14,7 +14,7 @@
 <body>
 
   <!-- Card -->
-  <div class="card mx-auto mt-5 w-50" style="width: 18rem;">
+  <div class="card mx-auto mt-5 w-75" style="width: 18rem;">
 
     <!-- Title Card -->
     <div class="card-body bg-light border-bottom">
@@ -32,7 +32,7 @@
       <!-- End Alert -->
 
       <!-- Form -->
-      <form class="row g-3">
+      <form class="row grid gap-0 row-gap-3">
 
         <!-- Inputs -->
         <div class="col-md-5">
@@ -45,7 +45,10 @@
         </div>
         <div class="col-md-4">
           <label for="inputAmount" class="form-label">Amount</label>
-          <input type="text" class="form-control" id="inputAmount" placeholder="Amount">
+          <span class="d-flex flex-row mb-3">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <input type="text" class="form-control" id="inputAmount" placeholder="Amount">
+          </span>
         </div>
         <div class="col-md-6">
           <label for="inputFirstName" class="form-label">First Name</label>
@@ -72,11 +75,11 @@
         </div>
         <!-- End Inputs -->
 
-        <!-- Division Radio & Text -->
-        <div class="row mt-4">
-          <!-- Radios -->
+        <!-- Radios -->
+        <div class="col-md-6 align-self-start" id="inputPayments">
           <label for="inputPayments" class="form-label">We accept:</label>
-          <div class="col-md-6 bg-secondary rounded-2 ps-3 align-self-start" id="inputPayments">
+          <br>
+          <span class="bg-secondary p-2 rounded-2"> 
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" id="inlineCheckbox1" name="paymentType" value="MasterCard">
               <label class="form-check-label" for="inlineCheckbox1">
@@ -101,20 +104,19 @@
                 <i class="fa-brands fa-cc-amex text-light"></i>
               </label>
             </div>
-          </div>
-          <!-- End Radios -->
-
-          <!-- Text Area -->
-          <div class="col-6">
-            <div class=" m-0 mb-3">
-              <label for="inputMessage" class="form-label">Message</label>
-              <textarea class="form-control" id="inputMessage" rows="3"></textarea>
-              <p class="pChanged">Add any notes here</p>
-            </div>
-          </div>
-          <!-- End Text Area -->
+          </span>
         </div>
-        <!-- End Division Radio & Text -->
+        <!-- End Radios -->
+
+        <!-- Text Area -->
+        <div class="col-md-6">
+          <div class=" m-0 mb-3">
+            <label for="inputMessage" class="form-label">Message</label>
+            <textarea class="form-control m-0" id="inputMessage" rows="3"></textarea>
+            <p class="pChanged">Add any notes here</p>
+          </div>
+        </div>
+        <!-- End Text Area -->
 
       </form>
       <!-- End Form -->
@@ -125,7 +127,7 @@
     <!-- Buttons -->
     <div class="card-body d-flex justify-content-end bg-light m-0 border-top">
       <button type="button" class="btn btn-secondary me-2">Cancel</button>
-      <button type="button" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-primary">Send</button>
     </div>
     <!-- End Buttons -->
 
